@@ -15,7 +15,7 @@ build:
     - diazorun = diazo.run:main
     - diazopreprocessor = diazo.rules:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -26,7 +26,6 @@ requirements:
     - python >=3.8
     - lxml
     - cssselect
-    - six
 
 test:
   imports:
