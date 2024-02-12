@@ -1,5 +1,5 @@
 {% set name = "diazo" %}
-{% set version = "1.5.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diazo-{{ version }}.tar.gz
-  sha256: 5f552e51a53d08d65935805a3cafde25bb8d2ed80867338ce9e9acb8da7f685e
+  sha256: a0322e7ce85e5f18cef4618e3018bd8ea63696e35da6640a97bb6fea9a19bea9
 
 build:
   entry_points:
@@ -41,7 +41,8 @@ test:
 
 about:
   home: http://diazo.org
-  summary: Diazo implements a Deliverance like language using a pure XSLT engine. With Diazo, you "compile" your theme and ruleset in one step, then use a superfast/simple transform on each request thereafter. Alternatively, compile your theme during development, check it into version control, and not touch Diazo during deployment.
+  summary: Diazo implements a Deliverance like language using a pure XSLT engine. With Diazo, you "compile" your theme and ruleset in one step, then use a superfast/simple transform on each request thereafter. Alternatively, compile your theme during development, check it into version control, and not touch Diazo during
+    deployment.
   license: BSD-3-Clause
   license_file: LICENSE.txt
 
