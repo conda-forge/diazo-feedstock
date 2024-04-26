@@ -1,5 +1,5 @@
 {% set name = "diazo" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diazo-{{ version }}.tar.gz
-  sha256: a0322e7ce85e5f18cef4618e3018bd8ea63696e35da6640a97bb6fea9a19bea9
+  sha256: f1b99a9e9402e22390d5a653068764d584df7a3bad828076da44ad420bfc61cf
 
 build:
   entry_points:
