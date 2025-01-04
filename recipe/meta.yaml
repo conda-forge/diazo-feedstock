@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/diazo-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/diazo-{{ version }}.tar.gz
   sha256: a2bc74a7595457c65975a610dc042b9f801c4c54b9241e984661323b76c6991e
 
 build:
@@ -16,14 +16,15 @@ build:
     - diazopreprocessor = diazo.rules:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - lxml
     - cssselect
 
@@ -37,6 +38,7 @@ test:
     - diazopreprocessor --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://diazo.org
