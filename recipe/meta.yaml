@@ -1,5 +1,5 @@
 {% set name = "diazo" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/diazo-{{ version }}.tar.gz
-  sha256: a2bc74a7595457c65975a610dc042b9f801c4c54b9241e984661323b76c6991e
+  sha256: 9825e30e7789da8a14436ee642470c62440a9215d329078beb68b12ff6e3aa2e
 
 build:
   entry_points:
@@ -16,7 +16,7 @@ build:
     - diazopreprocessor = diazo.rules:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,6 +24,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - webob
     - python >={{ python_min }}
     - lxml
     - cssselect
