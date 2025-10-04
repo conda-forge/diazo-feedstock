@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   name: diazo
-  version: 2.0.3
+  version: "2.0.3"
 
 package:
   name: ${{ name|lower }}
@@ -29,7 +30,7 @@ requirements:
     - setuptools
   run:
     - webob
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<4.0
     - lxml
     - cssselect
 
@@ -38,6 +39,7 @@ tests:
       imports:
         - diazo
       python_version: ${{ python_min }}.*
+      pip_check: true
   - requirements:
       run:
         - pip
