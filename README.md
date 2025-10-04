@@ -3,11 +3,12 @@ About diazo-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/diazo-feedstock/blob/main/LICENSE.txt)
 
-Home: http://diazo.org
+Home: http://diazo.org/
 
 Package license: BSD-3-Clause
 
-Summary: Diazo implements a Deliverance like language using a pure XSLT engine. With Diazo, you "compile" your theme and ruleset in one step, then use a superfast/simple transform on each request thereafter. Alternatively, compile your theme during development, check it into version control, and not touch Diazo during deployment.
+Summary: Diazo implements a Deliverance like language using a pure XSLT engine. With Diazo, you "compile" your theme and ruleset in one step, then use a superfast/simple transform on each request thereafter. Alternatively, compile your theme during development, check it into version control, and not touch Diazo during
+deployment.
 
 Current build status
 ====================
