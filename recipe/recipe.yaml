@@ -29,10 +29,10 @@ requirements:
     - pip
     - setuptools
   run:
-    - webob
     - python >=${{ python_min }},<4.0
-    - lxml
     - cssselect
+    - lxml
+    - webob
 
 tests:
   - python:
