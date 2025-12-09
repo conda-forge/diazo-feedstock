@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: diazo
-  version: "2.0.3"
+  version: "2.0.4"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/diazo-${{ version }}.tar.gz
-  sha256: 9825e30e7789da8a14436ee642470c62440a9215d329078beb68b12ff6e3aa2e
+  sha256: 71de35c2c45cd21855787f7d6d65b47eab0565c16d3fa448eb4c63869a9a6d82
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
