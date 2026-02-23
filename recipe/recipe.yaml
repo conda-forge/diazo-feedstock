@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: diazo
-  version: "2.0.4"
+  version: 2.0.5
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/diazo-${{ version }}.tar.gz
-  sha256: 71de35c2c45cd21855787f7d6d65b47eab0565c16d3fa448eb4c63869a9a6d82
+  sha256: ff759360edd200d10abbedc325e827cc1fc2e7de7ad068448024d32f62bbfe66
 
 build:
   number: 0
@@ -32,8 +32,6 @@ requirements:
     - python >=${{ python_min }},<4.0
     - cssselect
     - lxml
-    - webob
-
 tests:
   - python:
       imports:
